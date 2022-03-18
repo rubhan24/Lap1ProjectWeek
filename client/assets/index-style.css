@@ -1,0 +1,41 @@
+body{
+    background-image: none;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+form{
+    border:1px solid black;
+    border-radius: 5%;
+    width:50%;
+    margin: auto;
+    align-items: center;
+}
+
+body > form > div > label {
+    display: block;
+}
+
+
+.padding{
+    padding: 1em;
+}
+
+
+.padding-top{
+    padding: 0.5em;
+}
+
+
+.padding-bottom{
+    padding: 0.5em;
+}
+
+.card {
+    width:50%;
+    margin: auto;
+}
+

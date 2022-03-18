@@ -13,3 +13,6 @@
 ## Hakeem
 ## Peter
 ## Jaxsan
+
+* Added the form inputs 
+* Added the character count
