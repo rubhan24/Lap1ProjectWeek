@@ -39,3 +39,19 @@ body > form > div > label {
     margin: auto;
 }
 
+.border{
+    display: flex;
+    border: 1px solid black;
+}
+
+iframe {
+    margin: auto;
+}
+
+
+section{
+    margin: auto;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 5%;
+}

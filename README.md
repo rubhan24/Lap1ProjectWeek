@@ -14,5 +14,6 @@
 ## Peter
 ## Jaxsan
 
-* Added the form inputs 
-* Added the character count
+* Added the form inputs (18/03/2022)
+* Added the character count (18/03/2022)
+* Created a post request (19/03/2022)
