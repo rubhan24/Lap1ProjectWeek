@@ -18,7 +18,7 @@ async function postFormData(e) {
   const formData= new FormData(formEl)
   // console.log(formData)
   const formDataSerialised=Object.fromEntries(formData) //look up 
-  const jsonObject = {...formDataSerialised, "dateTime": current, "comment": "", "EmojiCount": [0,0,0]}
+  const jsonObject = {...formDataSerialised, "dateTime": current, "comment": "", "EmojiCount": [0,0,0], "gifLink":""}
   console.log(JSON.stringify(jsonObject, null, 2))
   try{
     const response = await fetch('http://localhost:8000/test', {
@@ -58,7 +58,7 @@ function createPost(resp){
             <p class="card-text">${item.journalEntry}</p>
         </div>
         <div style="padding:0em 1em 1em 1em">  
-            <iframe allow="fullscreen" frameBorder="0" height="270" src=${item.gifSearch} width="480"></iframe>   
+            <iframe allow="fullscreen" frameBorder="0" height="270" src="${item.gifLink}" width="480"></iframe>   
         </div>       
         <div class="container">
             <div class="row">
@@ -79,8 +79,6 @@ postList.prepend(div)
   }) 
 }
 
-
-
 // GIF SEARCH
 function sendApiRequest() {
   let userInput = document.getElementById("gif-search").value
@@ -94,19 +92,32 @@ function sendApiRequest() {
   })
   .then(function(json){
       const index = Math.floor(Math.random() * json.data.length)
-      console.log(json.data[index].images.fixed_height.url)
+      // console.log(json.data[index].images.fixed_height.url)
       let imgPath = json.data[index].images.fixed_height.url
       let gifImage=document.querySelector("#gifImage")
       // let img = document.createElement("img")
       gifImage.setAttribute("src", imgPath)
       // document.body.appendChild(img)
+      const gifObject = {
+        gifLink: json.data[index].images.fixed_height.url
+      }
+      // console.log(gifObject)
+      fetch ('http://localhost:8000/url', {
+        method: 'POST', 
+        body: JSON.stringify(gifObject),
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+        }
+      })
   })
 }
 
 
 
+
+
 // To extract the GIF URL of the desired gif
-// Send it to the JSON file 
+// Send it to
 
 
 

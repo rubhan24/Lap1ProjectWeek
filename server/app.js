@@ -24,6 +24,11 @@ app.post('/test', (req, res) => {
     res.json({success: true})
 })
 
+app.post('/url', (req, res)=>{
+   console.log(req.body)
+})
+
+
 app.get('/print', (req, res)=>{
     res.send(formData)
 })
