@@ -97,11 +97,10 @@ function sendApiRequest() {
       let gifImage=document.querySelector("#gifImage")
       // let img = document.createElement("img")
       gifImage.setAttribute("src", imgPath)
-      // document.body.appendChild(img)
       const gifObject = {
         gifLink: json.data[index].images.fixed_height.url
       }
-      // console.log(gifObject)
+      // // console.log(gifObject)
       fetch ('http://localhost:8000/url', {
         method: 'POST', 
         body: JSON.stringify(gifObject),
