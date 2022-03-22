@@ -29,12 +29,12 @@
 
         <div class="padding-top">
             <label for="journal-title" >Journal Title:</label>
-            <input type="text" id="journal-title" class="form-control" name="journal-title" required>
+            <input type="text" id="journal-title" class="form-control" name="journalTitle" required>
         </div>
 
         <div class="padding-top">
             <label for="journal-entry" >Journal Entry:</label>
-            <textarea id ="journal-entry" name="journal-entry" cols="30" rows="10" class="form-control" required maxlength="300"></textarea>
+            <textarea id ="journal-entry" name="journalEntry" cols="30" rows="10" class="form-control" required maxlength="300"></textarea>
             <div>
                 <span id="current">0</span>
                 <span>/ 300</span>
@@ -44,8 +44,9 @@
 
         <div class="padding-top"> 
             <label for="gif-search">How do you feel?</label>
-            <input type="text" name="gif-search" id="gif-search">
-            <button id="find-gif">Find Gif!</button>
+            <input type="text" name="gifSearch" id="gif-search">
+            <button onclick="sendApiRequest()" id="find-gif" >Find Gif!</button>
+            <img id="gifImage" alt="">
         </div>
 
         <div class="padding-top">
@@ -56,35 +57,10 @@
 
     <!--All Posts Section-->
     <h3>View all posts</h3>
+    <div id = "post">
+    </div>
 
-
-      <!-- <section class="padding">
-          <div>
-              <div class="card-body">
-                  <h5 class="card-title">Journal Title</h5>
-                  <p class="card-text">Journal Content will go here</p>
-              </div>
-              <div style="padding:0em 1em 1em 1em">     
-                  <iframe allow="fullscreen" frameBorder="0" height="270" src="https://giphy.com/embed/oD3muIFl7WzfS0hF42/video" width="480"></iframe>   
-              </div>       
-              <div class="container">
-                  <div class="row">
-                    <div class="col text-center">
-                      <button style="width:100%">&#128077; 1</button>
-                    </div>
-                    <div class="col text-center">
-                      <button style="width:100%">&#128078; 1</button>
-                    </div>
-                    <div class="col text-center">
-                      <button style="width:100%">&#10084; 1</button>
-                    </div>
-                  </div>
-                </div>   
-          </div>
-      </section> -->
-
-
-    <!--Footer-->
+      <!--Footer-->
     <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
           <div class="col-md-4 d-flex align-items-center">
