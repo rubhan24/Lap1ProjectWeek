@@ -14,11 +14,11 @@ const formData = require('./input.json')
 
 app.post('/test', (req, res) => {
     formData.push(req.body)
-    console.log(formData)
+    // console.log(formData)
 
     fs.writeFile ("input.json", JSON.stringify(formData, null, 2), function(err) {
         if (err) throw err;
-        console.log('complete');
+        console.log('Added form data to array');
         }
     )
     res.json({success: true})
