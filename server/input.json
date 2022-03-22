@@ -1,62 +1,15 @@
 [
   {
-    "journalTitle": "ksdjfoisjfoisdjfisdf",
-    "journalEntry": "asodiasidjiasd",
-    "gifSearch": "safoijdsfoijsdf",
-    "dateTime": "22/03/2022, 14:39:00",
-    "comment": "",
-    "EmojiCount": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "journalTitle": "Hello Peter",
-    "journalEntry": "Helo PEter",
-    "gifSearch": "",
-    "dateTime": "22/03/2022, 14:39:13",
-    "comment": "",
-    "EmojiCount": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "journalTitle": "asdasdjhoiasd",
-    "journalEntry": "adoijadasd",
-    "gifSearch": "posijosidfdsf",
-    "dateTime": "22/03/2022, 14:40:52",
-    "comment": "",
-    "EmojiCount": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "journalTitle": "Test",
-    "journalEntry": "Test",
+    "journalTitle": "Hello",
+    "journalEntry": "sdfsdfsdf",
     "gifSearch": "Happy",
-    "dateTime": "22/03/2022, 14:46:05",
+    "dateTime": "22/03/2022, 18:04:33",
     "comment": "",
     "EmojiCount": [
       0,
       0,
       0
-    ]
-  },
-  {
-    "journalTitle": "asdasdasd",
-    "journalEntry": "dasdasd",
-    "gifSearch": "Happy",
-    "dateTime": "22/03/2022, 14:54:08",
-    "comment": "",
-    "EmojiCount": [
-      0,
-      0,
-      0
-    ]
+    ],
+    "gifLink": ""
   }
 ]
