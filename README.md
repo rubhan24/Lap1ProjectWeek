@@ -17,3 +17,4 @@
 * Added the form inputs (18/03/2022)
 * Added the character count (18/03/2022)
 * Created a post request (19/03/2022)
+* Post request is being detected by the server and is being logged to JSON File (21/03/2022)

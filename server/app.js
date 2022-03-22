@@ -1,14 +1,31 @@
 const express = require ('express')
-const app = express ()
-const port = 8000; 
 const cors = require('cors')
+const fs = require('fs')
+const app = express ()
+const port = process.env.PORT || 8000;
 
+
+app.use(express.json())
 app.use(cors())
 
-data = [];
 
-app.get('/', (req, res)=>{
-    res.send(data)
+//const formData = parse input.json
+const formData = require('./input.json')
+
+app.post('/test', (req, res) => {
+    formData.push(req.body)
+    console.log(formData)
+
+    fs.writeFile ("input.json", JSON.stringify(formData, null, 2), function(err) {
+        if (err) throw err;
+        console.log('complete');
+        }
+    )
+    res.json({success: true})
+})
+
+app.get('/print', (req, res)=>{
+    res.send(formData)
 })
 
 app.listen (port, ()=>{
