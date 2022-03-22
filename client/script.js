@@ -23,7 +23,7 @@ async function postFormData(e) {
   const formData= new FormData(formEl)
   // console.log(formData)
   const formDataSerialised=Object.fromEntries(formData) //look up 
-  const jsonObject = {...formDataSerialised, "dateTime": current, "comment": "", "contribution": [0,0,0]}
+  const jsonObject = {...formDataSerialised, "dateTime": current, "comment": "", "EmojiCount": [0,0,0]}
   console.log(JSON.stringify(jsonObject, null, 2))
   try{
     const response = await fetch(url, {
