@@ -19,11 +19,11 @@ formEl.addEventListener('submit', postFormData)
 async function postFormData(e) {
 
   const current= new Date().toLocaleString() 
-  const formData= new FormData(formEl)
+  const formData= new FormData(formEl) // console.log this to check what format this is in 
   // console.log(formData)
-  const formDataSerialised=Object.fromEntries(formData) //look up 
+  const formDataSerialised=Object.fromEntries(formData) //console.log this to see what this does
 
-  console.log('got ' + gifLink);
+  // console.log('got ' + gifLink);
   const jsonObject = {...formDataSerialised, "dateTime": current, "comment": "", "EmojiCount": [0,0,0], "gifLink":gifLink}
   console.log(JSON.stringify(jsonObject, null, 2))
   try{
@@ -79,8 +79,24 @@ function createPost(resp){
                 <button style="width:100%" onclick="counterIncrease('${item.journalTitle}', 'heart')">&#10084; ${item.EmojiCount[2]}</button>
               </div>
             </div>
-          </div>   
-    </div>
+          </div>  
+          <div class="comments">
+                <h2>Comments</h2>
+                <div id="comment-box">
+                </div>
+            </div>
+            <div class="container">
+              <h2>Leave us a comment</h2>
+              <form>
+                 <textarea id="commentArea" placeholder="Add Your Comment" value=" "></textarea>
+                 <div id="commentBtn">
+                     <input id="submitComment" type="button" value="Comment">
+                     <button id="clear">  
+                      Cancel</button>
+                 </div> 
+              </form>
+          </div>
+          </div>
 </section>`
 postList.prepend(div)
   }) 
@@ -111,6 +127,7 @@ function sendApiRequest() {
 
 // Emoji Counter
 function counterIncrease(journaltitle,emoji){
+  
   // console.log('got' + journaltitle + emoji)
   fetch('http://localhost:8000/emojiUpdate', {
     method: 'PUT',
@@ -135,6 +152,54 @@ function counterIncrease(journaltitle,emoji){
 
 
 
+// COMMENT SECTION 
+
+const field = document.querySelector('#commentArea');
+const backUp = field.getAttribute('placeholder')
+const btn = document.querySelector('#commentBtn')
+const clear = document.getElementById('clear')
+const submit = document.querySelector('#submitComment')
+// const comments = document.querySelector('#comment-box')
+const comments = document.getElementById('comment-box')
+
+let comments_arr = [];
+field.onfocus = function(){
+    this.setAttribute('placeholder','')
+    this.style.borderColor = '#333'
+    btn.style.display = 'block'
+} // when clicking on this, placeholder changes into ' ', border colour changes and buttons will appear.
+
+field.onblur = function(){
+    this.setAttribute('placeholder',backUp)
+} //click away, placeholder returns
 
 
+const display_comments = () => {
+    let list = '<ul>'
+    comments_arr.forEach(comment => {
+        list += `<div>${comment}</div>`
+    })
+    list += '</ul>'
+    comments.innerHTML = list
+} // Creates a list of comments and appending to the comment box
 
+clear.onclick = function(e){
+    e.preventDefault();
+    btn.style.display = 'none';
+    field.value = ' '
+    // comments_arr.length = 0;
+    display_comments()
+} 
+
+submit.onclick = function(event){
+    event.preventDefault();
+    const content = field.value;
+    if(content.length > 0){ // if there is content
+      // add the comment to the array
+      comments_arr.push(content);
+// re-genrate the comment html list
+      display_comments();
+      // reset the textArea content 
+      field.value = '';
+    }
+}
