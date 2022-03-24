@@ -29,21 +29,40 @@ app.post('/test', (req, res) => {
 })
 
 app.put('/emojiUpdate', (req, res)=>{
-   console.log(req.body.title)
-//    console.log(req.body.emoji)
-//    console.log(formData[0])
-   const title = req.body.title;
-   const matchingPost = formData.find(post=> post.journalTitle ===title )
-//    console.log(matchingPost)
+//    console.log(req.body.id)
+// //    console.log(req.body.emoji)
+// //    console.log(formData[0])
+    const index = req.body.id;
+    console.log(index)
+   const matchingPost = formData.find(post=> post.id.toString() === index )
+   console.log(matchingPost)
    if (req.body.emoji === 'up'){
         matchingPost.EmojiCount[0]++
    } else if(req.body.emoji === 'down'){
-        matchingPost.EmojiCount[1]++
-   } else if(req.body.emoji === 'heart'){
-        matchingPost.EmojiCount[2]++
-   }
-   writeToJson();
+         matchingPost.EmojiCount[1]++
+    } else if(req.body.emoji === 'heart'){
+         matchingPost.EmojiCount[2]++
+    }
+    writeToJson();
 })
+
+
+
+app.put('/comments', (req, res)=>{
+    console.log(req.body)
+    // // console.log(req.body.title)
+    // // console.log(req.body.comment)
+    const index=req.body.id;
+    const matchingPost = formData.find(post=> post.id===index)
+    console.log(matchingPost)
+    matchingPost.comment.push(req.body.comment)
+    // console.log(matchingPost)
+    writeToJson()
+})
+
+
+
+
 
 
 app.get('/print', (req, res)=>{
