@@ -30,7 +30,7 @@
                 <a class="nav-link active px-3" aria-current="page" href="#" style="color:white">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active px-3" aria-current="page" href="#" style="color:white">Create Post</a>
+                <a class="nav-link active px-3" aria-current="page" href="#top" style="color:white">Create Post</a>
               </li>
             
             </ul>
@@ -44,10 +44,11 @@
         </div>
       </nav>
     <!--Write Post Section Form-->
-    <form class="padding" style="width:20%" style="margin:500px 0px 0px 250px">
+    <form class="padding" style="width:20%">
       
-      <div class="padding-top" >
-          <h3>Create your Rant</h3>
+        <div class="padding-top" >
+     
+             <h2>Create your Rant</h2>
             <input type="text" id="journal-title" class="form-control" name="journalTitle" placeholder="Rant Title" required>
         </div>
 
@@ -62,7 +63,7 @@
 
         <div class="padding-top"> 
             <input type="text" name="gifSearch" id="gif-search" placeholder="How do you feel?">
-            <button type="button" onclick="sendApiRequest()" id="find-gif" class="btn btn-light mx-4 py-1" >Find Gif!</button>
+            <button type="button" onclick="sendApiRequest()" id="find-gif" class="btn btn-secondary mx-4 py-1" >Find Gif!</button>
             <br>
         </div>
           <img id="gifImage" alt="" class="center">
@@ -74,10 +75,10 @@
     </form>
 
     <!--All Posts Section-->
-    <h3 style="margin:500px 0px 0px 250px">View all posts</h3>
+    
+    <h2><strong>View all posts</strong></h2>
     <section id="postHere">
-  
-
+      
     </section>
 
     
@@ -93,7 +94,7 @@
             <a href="/" class="mb-3 me-2 mb-md-0 text-decoration-none lh-1">
               <img src="./assets/images/rantLogo.png" alt="" style="width:60px">
             </a>
-            <span  style="color:white">© 2021 Company, Inc</span>
+            <span  style="color:white">© 2022 The Rant Company, Inc</span>
           </div>
     
     

@@ -45,7 +45,7 @@ fetch('http://localhost:8000/print')
 })
 
 function createPost(resp){
-  resp.forEach(item => {
+   resp.forEach(item => {
  
     count++
     console.log(item.comment)
@@ -61,12 +61,12 @@ function createPost(resp){
       cardBody.setAttribute('class', "card-body")
       eachPostDiv.appendChild(cardBody)
 
-          const itemTitle=document.createElement('h5')
+          const itemTitle=document.createElement('h2')
           itemTitle.setAttribute('class', 'card-title')
           itemTitle.textContent=item.journalTitle
           cardBody.appendChild(itemTitle)
 
-          const itemDateTime=document.createElement('h7')
+          const itemDateTime=document.createElement('p')
           itemDateTime.setAttribute('class', 'card-title')
           itemDateTime.textContent=item.dateTime
           cardBody.appendChild(itemDateTime)
@@ -82,11 +82,10 @@ function createPost(resp){
 
           const gifImg=document.createElement('img')
           gifImg.setAttribute('src', `${item.gifLink}`)
-          gifImg.setAttribute('style', 'width:100%')
           imgDiv.appendChild(gifImg)
         
       const divButton=document.createElement('div')
-      divButton.setAttribute('class', 'container')
+      divButton.setAttribute('style', 'padding:0em 1em 1em 1em')
       eachPostDiv.appendChild(divButton)
 
           const divContainer=document.createElement('div')
@@ -97,9 +96,10 @@ function createPost(resp){
             divCol1.setAttribute('class', 'col text-center')
             divContainer.appendChild(divCol1)
 
-                const emojiButton1=document.createElement('button')
+                const emojiButton1=document.createElement('a')
                 emojiButton1.setAttribute('style', "width:100%")
-                emojiButton1.setAttribute('type', 'button')
+                emojiButton1.setAttribute('role', 'button')
+                emojiButton1.setAttribute('class', 'btn btn-secondary')
                 emojiButton1.setAttribute('onclick', `counterIncrease(${item.id}, 'up')`)
                 emojiButton1.textContent=`👍 ${item.EmojiCount[0]}`
                 divCol1.appendChild(emojiButton1)
@@ -108,9 +108,10 @@ function createPost(resp){
             divCol2.setAttribute('class', 'col text-center')
             divContainer.appendChild(divCol2)
   
-                const emojiButton2=document.createElement('button')
+                const emojiButton2=document.createElement('a')
                 emojiButton2.setAttribute('style', "width:100%")
-                emojiButton2.setAttribute('type', 'button')
+                emojiButton2.setAttribute('role', 'button')
+                emojiButton2.setAttribute('class', 'btn btn-secondary')
                 emojiButton2.setAttribute('onclick', `counterIncrease(${item.id}, 'down')`)
                 emojiButton2.textContent=`👎 ${item.EmojiCount[1]}`
                 divCol2.appendChild(emojiButton2)
@@ -119,18 +120,21 @@ function createPost(resp){
             divCol3.setAttribute('class', 'col text-center')
             divContainer.appendChild(divCol3)
   
-                const emojiButton3=document.createElement('button')
+                const emojiButton3=document.createElement('a')
                 emojiButton3.setAttribute('style', "width:100%")
-                emojiButton3.setAttribute('type', 'button')
+                emojiButton3.setAttribute('role', 'button')
+                emojiButton3.setAttribute('class', 'btn btn-secondary')
                 emojiButton3.setAttribute('onclick', `counterIncrease(${item.id}, 'heart')`)
                 emojiButton3.textContent=`❤️ ${item.EmojiCount[2]}`
                 divCol3.appendChild(emojiButton3)
 
       const commentTitle=document.createElement('div')
       commentTitle.setAttribute('class', 'comments')
+      commentTitle.setAttribute('style', 'padding:0em 1em 0em 1em')
+
       eachPostDiv.appendChild(commentTitle)
           
-          const h2CommentTitle=document.createElement('h2')
+          const h2CommentTitle=document.createElement('h3')
           h2CommentTitle.textContent='Comments'
           commentTitle.appendChild(h2CommentTitle)
 
@@ -139,18 +143,23 @@ function createPost(resp){
           commentTitle.appendChild(commentBoxDiv)
 
             if(item.comment.length===0){
+              const noCommentDiv=document.createElement('div')
+              commentTitle.setAttribute('od', 'noComment')
               const noComment=document.createElement('p')
               noComment.textContent="No Comments Found Here"
-              commentBoxDiv.appendChild(noComment)
+              noCommentDiv.appendChild(noComment)
+              commentBoxDiv.appendChild(noCommentDiv)
             }else{
 
               for(let i=0; i<item.comment.length;i++){  
+                const commentDi=document.createElement('div')
                 const comDateTimePTag=document.createElement('p')
                 comDateTimePTag.textContent=`${item.comment[i].comDateTime}`
                 const commentPTag=document.createElement('p')
                 commentPTag.textContent=`${item.comment[i].comment}`
-                commentBoxDiv.appendChild(comDateTimePTag)
-                commentBoxDiv.appendChild(commentPTag)
+                commentDi.appendChild(comDateTimePTag)
+                commentDi.appendChild(commentPTag)
+                commentBoxDiv.appendChild(commentDi)
               }
             }
 
@@ -159,7 +168,7 @@ function createPost(resp){
       divComment.setAttribute('class', 'container')
       eachPostDiv.appendChild(divComment)
         
-        const leaveComment=document.createElement('h2')
+        const leaveComment=document.createElement('h3')
         leaveComment.textContent='Leave us a comment'
         divComment.appendChild(leaveComment)
         
@@ -168,6 +177,8 @@ function createPost(resp){
 
             const commentTextArea=document.createElement('textarea')
             commentTextArea.setAttribute('id',`${item.id}`)
+            commentTextArea.setAttribute('class',`form-control`)
+
             commentTextArea.setAttribute('placeholder','Add your comment')
             commentTextArea.setAttribute('value',' ')
             commentForm.appendChild(commentTextArea)
@@ -176,11 +187,12 @@ function createPost(resp){
             commentBtnDiv.setAttribute('id', 'commentBtn')
             commentForm.appendChild(commentBtnDiv)
 
-              const commentBtn=document.createElement('input')
+              const commentBtn=document.createElement('a')
               commentBtn.setAttribute('id', 'submitComment')
               commentBtn.setAttribute('itemId',`${item.id}`)
-              commentBtn.setAttribute('type', 'button',)
-              commentBtn.setAttribute('value', 'Comment')
+              commentBtn.setAttribute('role', 'button',)
+              commentBtn.setAttribute('class', 'btn btn-primary')
+              commentBtn.textContent='Comment'
               commentBtn.setAttribute('onclick', `sendComment(${item.id})`)
               commentBtnDiv.appendChild(commentBtn)
 
