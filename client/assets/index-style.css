@@ -14,15 +14,14 @@ nav{
 
 body > form{
     border:1px solid black;
-    border-radius: 5%;
+    border-radius: 20px;
     width:50%;
-    margin: auto;
+    margin: auto auto auto auto;
     align-items: center;
     background-color: #000000;
     opacity: 80%;
     color: white;
     font-family:Fredoka;
-
 }
 
 body > form > div > label {
@@ -33,6 +32,13 @@ body > form > div:nth-child(4){
     display:flex;
     align-items:center;
 }
+
+body>div>h2{
+    text-align:center;
+    margin-top:50px;
+    font-family:Fredoka;
+}
+
 
 
 .center{
@@ -76,10 +82,83 @@ iframe {
     margin: auto;
     align-items: center;
     border: 1px solid black;
-    border-radius: 5%;
+    border-radius: 20px;
+    background-color: rgba(0,0,0,80%);
+    color:white;
 }
 
 section{
     width:50%;
     margin:auto;
 }
+
+
+
+#post > div > img {
+    width:100%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+
+#post > div.card-body > p.card-title{
+    font-style: italic;
+}
+
+#post > div.card-body > p.card-text{
+    padding-top:20px;
+}
+
+#post > div > div > div> button{
+    padding:20px 0 20px 0;
+    border-radius: 10%;
+}
+
+#comment-box > div {
+    background-color: rgba(0,0,0,40%);
+    border-radius: 10px;
+    padding:0px 10px 0px 10px;
+    word-wrap: break-word;
+}
+
+#noComment {
+    background-color: rgba(0,0,0,40%);
+    border-radius: 10px;
+    padding:0px 10px 0px 10px;
+    word-wrap: break-word;
+}
+
+#submitComment{
+    width:100%
+}
+
+#commentBtn{
+    padding: 10px 0px 10px 0px;
+}
+
+#postHere > section {
+    padding-bottom: 10px;
+}
+
+.card-body{
+    padding:1em;
+}
+
+#post > div.container{
+    padding:0em 1em 1em 1em;
+
+}
+
+body >h2 {
+    margin-left:auto;
+    margin-right:auto;
+    padding: 50px 0;
+    font-family:Fredoka;
+
+}
+
+#postHere {
+    font-family:Fredoka;
+}
+
+
