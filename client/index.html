@@ -12,29 +12,47 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 </head>
-<body>
+<body >
+ 
     <!--Navigation Bar-->
-    <nav class="navbar navbar-light bg-light">
+    
+
+      <nav class="navbar navbar-expand-md navbar-light bg-black py-0 sticky-top">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <!-- <img src="..." alt="" width="30" height="24" class="d-inline-block align-text-top"> -->
-            Bootstrap
-          </a>
+         
+          <a class="navbar-brand" href="#"><img src="./assets/images/rantLogo.png" alt="" style="width:60px"></a>
+          <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active px-3" aria-current="page" href="#" style="color:white">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active px-3" aria-current="page" href="#" style="color:white">Create Post</a>
+              </li>
+            
+            </ul>
+            <span class="navbar-text">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li><a href="#" class="nav-link px-3" style="color:white">Login</a></li>
+                <li><a href="#"  class="nav-link px-3" style="color:white" >Register</a></li>
+              </ul>
+            </span>
+          </div>
         </div>
       </nav>
     <!--Write Post Section Form-->
-    <h3>Create your post</h3>
-    <form class="padding" >
-       
-
-        <div class="padding-top">
-            <label for="journal-title" >Journal Title:</label>
-            <input type="text" id="journal-title" class="form-control" name="journalTitle" required>
+    <form class="padding" style="width:20%" style="margin:500px 0px 0px 250px">
+      
+      <div class="padding-top" >
+          <h3>Create your Rant</h3>
+            <input type="text" id="journal-title" class="form-control" name="journalTitle" placeholder="Rant Title" required>
         </div>
 
         <div class="padding-top">
-            <label for="journal-entry" >Journal Entry:</label>
-            <textarea id ="journal-entry" name="journalEntry" cols="30" rows="10" class="form-control" required maxlength="300"></textarea>
+            <textarea id ="journal-entry" name="journalEntry" cols="30" rows="5" class="form-control" required maxlength="300" placeholder="Rant Here"></textarea>
             <div>
                 <span id="current">0</span>
                 <span>/ 300</span>
@@ -43,21 +61,20 @@
         </div>
 
         <div class="padding-top"> 
-            <label for="gif-search">How do you feel?</label>
-            <input type="text" name="gifSearch" id="gif-search">
-            <button type="button" onclick="sendApiRequest()" id="find-gif" >Find Gif!</button>
+            <input type="text" name="gifSearch" id="gif-search" placeholder="How do you feel?">
+            <button type="button" onclick="sendApiRequest()" id="find-gif" class="btn btn-light mx-4 py-1" >Find Gif!</button>
             <br>
-            <img id="gifImage" alt="">
         </div>
+          <img id="gifImage" alt="" class="center">
 
         <div class="padding-top">
-            <button type="submit" class="btn btn-primary" id="submit">Submit</button> 
+            <button type="submit" class="btn btn-primary" id="submit" style="width:100%">Submit</button> 
         </div>
 
     </form>
 
     <!--All Posts Section-->
-    <h3>View all posts</h3>
+    <h3 style="margin:500px 0px 0px 250px">View all posts</h3>
     <section id="postHere">
   
 
@@ -68,21 +85,29 @@
 
 
       <!--Footer-->
-    <div class="container">
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-          <div class="col-md-4 d-flex align-items-center">
-            <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-              <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
-            </a>
-            <span class="text-muted">© 2021 Company, Inc</span>
-          </div>
+
       
-          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-            <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
-            <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
-            <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-1 border-top bg-black">
+
+          <div class="col-md-4 d-flex align-items-center" style="margin-left:20px">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-decoration-none lh-1">
+              <img src="./assets/images/rantLogo.png" alt="" style="width:60px">
+            </a>
+            <span  style="color:white">© 2021 Company, Inc</span>
+          </div>
+    
+    
+      
+       
+
+          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex" style="margin-right:40px">
+            <li class="ms-3 px-2"><a class="text-muted" href="#"><img src="./assets/images/facebookLogo.PNG" alt="" style="width:20px"></a></li>
+            <li class="ms-3 px-2"><a class="text-muted" href="#"><img src="./assets/images/instagramLogo.PNG" alt="" style="width:25px"></a></li>
+            <li class="ms-3 px-2"><a class="text-muted" href="#"><img src="./assets/images/twitterLogo.PNG" alt="" style="width:23px"></a></li>
           </ul>
-        </footer>
-      </div>
+     
+      </footer>
+
+   
 </body>
 </html>
