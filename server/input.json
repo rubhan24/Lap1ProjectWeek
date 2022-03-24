@@ -1,15 +1,118 @@
 [
   {
-    "journalTitle": "Hello",
-    "journalEntry": "Hi",
-    "gifSearch": "Happy",
-    "dateTime": "23/03/2022, 12:05:09",
-    "comment": "",
+    "journalTitle": "Testing",
+    "journalEntry": "Testing",
+    "gifSearch": "1",
+    "dateTime": "24/03/2022, 08:19:03",
+    "comment": [
+      "Hello"
+    ],
+    "EmojiCount": [
+      1,
+      1,
+      0
+    ],
+    "gifLink": "https://media3.giphy.com/media/rapAHwDj92zU4/200.gif?cid=74aacfdaofhzxzcqwqr2mijvl5au8l4zlzu68bwgc803pe3u&rid=200.gif&ct=g",
+    "id": 0
+  },
+  {
+    "journalTitle": "Testing",
+    "journalEntry": "Testing1",
+    "gifSearch": "Hello",
+    "dateTime": "24/03/2022, 08:19:26",
+    "comment": [
+      "Hello"
+    ],
+    "EmojiCount": [
+      1,
+      0,
+      0
+    ],
+    "gifLink": "https://media4.giphy.com/media/65OOoKUgwJlJpRma8O/200.gif?cid=74aacfda5go4jfuyb99oki6puvzcachbd96uil5vb556xi94&rid=200.gif&ct=g",
+    "id": 1
+  },
+  {
+    "journalTitle": "asdasd",
+    "journalEntry": "sdfsfsdf",
+    "gifSearch": "happy",
+    "dateTime": "24/03/2022, 08:31:34",
+    "comment": [],
     "EmojiCount": [
       0,
       0,
       0
     ],
-    "gifLink": "https://media4.giphy.com/media/9Y6n9TR7U07ew/200.gif?cid=74aacfda8n0ab8e2i6sqw7njwt1lr3eithy9m0dly8jrt626&rid=200.gif&ct=g"
+    "gifLink": "https://media4.giphy.com/media/7r5vNfdMVTVp7JkhGB/200.gif?cid=74aacfdau7osy9wsg2zdm5fvqon9v9nsiqv4nd6quwau6ogw&rid=200.gif&ct=g",
+    "id": 1
+  },
+  {
+    "journalTitle": "asdasd",
+    "journalEntry": "asdasd",
+    "gifSearch": "Happy",
+    "dateTime": "24/03/2022, 08:37:51",
+    "comment": [],
+    "EmojiCount": [
+      0,
+      0,
+      0
+    ],
+    "gifLink": "https://media2.giphy.com/media/o75ajIFH0QnQC3nCeD/200.gif?cid=74aacfdaqe1sqwrgf7a6cyef9i62cwm6qy8l8ljrouewzehy&rid=200.gif&ct=g",
+    "id": 3
+  },
+  {
+    "journalTitle": "asdasd",
+    "journalEntry": "asdasd",
+    "gifSearch": "Happy",
+    "dateTime": "24/03/2022, 08:37:58",
+    "comment": [],
+    "EmojiCount": [
+      0,
+      0,
+      0
+    ],
+    "gifLink": "https://media1.giphy.com/media/CyoQdbc7FHqqTpkSPI/200.gif?cid=74aacfdaqe1sqwrgf7a6cyef9i62cwm6qy8l8ljrouewzehy&rid=200.gif&ct=g",
+    "id": 4
+  },
+  {
+    "journalTitle": "asdasd",
+    "journalEntry": "asasd",
+    "gifSearch": "sad",
+    "dateTime": "24/03/2022, 08:38:41",
+    "comment": [],
+    "EmojiCount": [
+      0,
+      0,
+      0
+    ],
+    "gifLink": "",
+    "id": 1
+  },
+  {
+    "journalTitle": "sadasd",
+    "journalEntry": "sasdas",
+    "gifSearch": "sad",
+    "dateTime": "24/03/2022, 08:38:46",
+    "comment": [],
+    "EmojiCount": [
+      0,
+      0,
+      0
+    ],
+    "gifLink": "https://media3.giphy.com/media/pncpd012ij3qw/200.gif?cid=74aacfda0bjyqtfqr0prq4qq4pjngheo0ek6tpkpc437i2v0&rid=200.gif&ct=g",
+    "id": 1
+  },
+  {
+    "journalTitle": "sadasdasdasd",
+    "journalEntry": "sasdasasdasd",
+    "gifSearch": "sad",
+    "dateTime": "24/03/2022, 08:39:04",
+    "comment": [],
+    "EmojiCount": [
+      0,
+      0,
+      0
+    ],
+    "gifLink": "https://media0.giphy.com/media/l1KVaj5UcbHwrBMqI/200.gif?cid=74aacfda0bjyqtfqr0prq4qq4pjngheo0ek6tpkpc437i2v0&rid=200.gif&ct=g",
+    "id": 1
   }
 ]
