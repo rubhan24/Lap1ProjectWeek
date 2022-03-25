@@ -15,12 +15,12 @@
     "cors": "^2.8.5",
     "coverage": "^0.4.1",
     "dayjs": "^1.11.0",
-    "express": "*",
+    "express": "^4.17.3",
     "jest": "^27.5.1",
     "nodemon": "^2.0.15"
   },
   "dependencies": {
-    "express": "*",
+    "express": "^4.17.3",
     "cors": "^2.8.5"
   },
   "description": ""
