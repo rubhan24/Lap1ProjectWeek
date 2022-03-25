@@ -12,16 +12,15 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cors": "^2.8.5",
     "coverage": "^0.4.1",
     "dayjs": "^1.11.0",
-    "jest": "^27.5.1",
-    "nodemon": "^2.0.15"
+    "jest": "^27.5.1"
   },
   "dependencies": {
     "express": "^4.17.3",
     "body-parser": "*",
-    "cors": "^2.8.5"
+    "cors": "^2.8.5",
+    "nodemon": "^2.0.15"
   },
   "description": ""
 }
