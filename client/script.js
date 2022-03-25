@@ -22,7 +22,7 @@ async function postFormData(e) {
   const jsonObject = {...formDataSerialised, "dateTime": current, "comment": [], "EmojiCount": [0,0,0], "gifLink":gifLink, 'id':count}
   console.log(JSON.stringify(jsonObject, null, 2))
   try{
-    const response = await fetch('http://localhost:8000/test', {
+    const response = await fetch('https://salty-lake-91235.herokuapp.com/test', {
       method: 'POST', 
       body: JSON.stringify(jsonObject),
       headers: {
@@ -37,7 +37,7 @@ async function postFormData(e) {
 }
 
 // ----------------------------- Fetching Data from the Backend and creating a post for each item in the input.json file--------------------------------
-fetch('http://localhost:8000/print')
+fetch('https://salty-lake-91235.herokuapp.com/print')
 .then(resp =>  resp.json())
 .then(resp=> {
   console.log(resp)
@@ -265,7 +265,7 @@ function sendApiRequest() {
 // ----------------------------- counterIncrease FUNCTION WHICH SENDS INFO TO BACKEND WHEN YOU PRESS THE EMOJI BUTTON IN EACH POST --------------------------------
 function counterIncrease(id,emoji,event){
   // console.log('got' + journaltitle + emoji)
-  fetch('http://localhost:8000/emojiUpdate', {
+  fetch('https://salty-lake-91235.herokuapp.com/emojiUpdate', {
     method: 'PUT',
     body: JSON.stringify({ id: id, emoji: emoji }),
     headers: { 'Content-Type': 'application/json' },
@@ -283,7 +283,7 @@ function sendComment(id) {
     console.log(textBoxValue)
     // console.log(textBoxValue)
     // console.log(journalTitle)
-    fetch('http://localhost:8000/comments', {
+    fetch('https://salty-lake-91235.herokuapp.com/comments', {
       method: 'PUT',
       body: JSON.stringify({ comment: textBoxValue, id: id, comDateTime: commentDateTime}),
       headers: { 'Content-Type': 'application/json' },
