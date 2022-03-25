@@ -73,6 +73,7 @@ app.get('/print', (req, res)=>{
     res.send(formData)
 })
 
+app.get('/', (req, res) => res.send("backend deployed from Rubhan"))
 // ----------------------------- THIS LISTENS TO REQUESTS --------------------------------
 
 app.listen (port, ()=>{
